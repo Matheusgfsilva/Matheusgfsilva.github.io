@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Matheus Gomes</title>
+  <meta name="description" content="Matheus Gomes — estudante de Ciência da Computação na UFPB e Machine Learning Engineer, com foco em visão computacional e desenvolvimento full stack." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script>
+    // Escolhe o idioma antes de desenhar a página: preferência salva, senão o idioma do navegador
+    (function () {
+      var lang;
+      try { lang = localStorage.getItem("lang"); } catch (e) {}
+      if (!lang) lang = (navigator.language || "pt").toLowerCase().indexOf("pt") === 0 ? "pt-BR" : "en";
+      document.documentElement.lang = lang;
+    })();
+  </script>
+</head>
+
+<body>
+
+  <!-- Cabeçalho -->
+  <header class="header">
+    <div class="brand">
+      <strong>UFPB</strong>
+      <span data-lang="pt">Ciência da Computação</span>
+      <span data-lang="en">Computer Science</span>
+    </div>
+    <nav>
+      <ul>
+        <li class="hide-sm"><a href="#experiencia"><span data-lang="pt">Experiência</span><span data-lang="en">Experience</span></a></li>
+        <li class="hide-sm"><a href="#projetos"><span data-lang="pt">Projetos</span><span data-lang="en">Projects</span></a></li>
+        <li class="hide-sm"><a href="#novidades"><span data-lang="pt">Novidades</span><span data-lang="en">News</span></a></li>
+        <li>
+          <a data-lang="pt" href="docs/curriculo_matheus_gomes_pt.pdf" target="_blank" rel="noopener">Currículo</a>
+          <a data-lang="en" href="docs/resume_matheus_gomes_en.pdf" target="_blank" rel="noopener">Resume</a>
+        </li>
+        <li>
+          <button class="lang-toggle" type="button" onclick="toggleLang()" aria-label="Mudar idioma / Change language">
+            <span data-lang="pt">EN</span><span data-lang="en">PT</span>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Sobre -->
+  <section class="about">
+    <div class="container">
+      <div class="row">
+        <div>
+          <!-- Coloque sua foto em images/foto.jpg (quadrada ou retrato) -->
+          <img class="photo" src="images/foto.jpg" alt="Matheus Gomes"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="photo-fallback" aria-hidden="true">MG</div>
+        </div>
+
+        <div>
+          <h2>Matheus Gomes</h2>
+
+          <div data-lang="pt">
+            <p>
+              Sou estudante de Ciência da Computação na Universidade Federal da Paraíba (UFPB) e
+              Machine Learning Engineer voluntário no laboratório ARIA, em João Pessoa.
+            </p>
+            <p>
+              No ARIA, desenvolvo modelos de visão computacional — detecção, segmentação e OCR — para
+              ler nomes e dosagens de medicamentos em parceria com o Hospital Israelita Albert Einstein,
+              e trabalho com modelos preditivos sobre dados financeiros. Antes disso, fui sócio
+              desenvolvedor do <a href="https://usecompendium.com" target="_blank" rel="noopener">Compendium</a>,
+              uma plataforma web de gestão de normas e procedimentos para empresas.
+            </p>
+            <p>
+              Quero empreender em tecnologia. Fora do código, levo a disciplina a sério: treino,
+              alimentação e finanças pessoais.
+            </p>
+            <p>
+              Você pode falar comigo em
+              <a href="mailto:matheusgfsilva16@gmail.com">matheusgfsilva16@gmail.com</a>,
+              ver meu <a href="https://github.com/Matheusgfsilva" target="_blank" rel="noopener">GitHub</a>
+              ou me encontrar no <a href="https://www.linkedin.com/in/matheus-gomesfs/" target="_blank" rel="noopener">LinkedIn</a>.
+              Meu <a href="docs/curriculo_matheus_gomes_pt.pdf" target="_blank" rel="noopener">currículo (PDF)</a>
+              também está disponível.
+            </p>
+          </div>
+
+          <div data-lang="en">
+            <p>
+              I'm a Computer Science student at the Federal University of Paraíba (UFPB) and a volunteer
+              Machine Learning Engineer at the ARIA lab in João Pessoa, Brazil.
+            </p>
+            <p>
+              At ARIA, I build computer vision models — detection, segmentation and OCR — that read drug
+              names and dosages in partnership with Hospital Israelita Albert Einstein, and I work on
+              predictive models for financial data. Before that, I co-founded and developed
+              <a href="https://usecompendium.com" target="_blank" rel="noopener">Compendium</a>, a web platform
+              for managing company policies and procedures.
+            </p>
+            <p>
+              I want to build tech ventures. Outside of code, I take discipline seriously: training,
+              nutrition and personal finances.
+            </p>
+            <p>
+              You can reach me at
+              <a href="mailto:matheusgfsilva16@gmail.com">matheusgfsilva16@gmail.com</a>,
+              visit my <a href="https://github.com/Matheusgfsilva" target="_blank" rel="noopener">GitHub</a>,
+              or connect with me on <a href="https://www.linkedin.com/in/matheus-gomesfs/" target="_blank" rel="noopener">LinkedIn</a>.
+              You can also access my <a href="docs/resume_matheus_gomes_en.pdf" target="_blank" rel="noopener">resume (PDF)</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"><div></div></div>
+
+  <!-- Experiência -->
+  <section id="experiencia">
+    <div class="container">
+      <div class="section-title">
+        <h2><span data-lang="pt">Experiência</span><span data-lang="en">Experience</span></h2>
+      </div>
+
+      <div class="card">
+        <h4>Machine Learning Engineer · <span data-lang="pt">Laboratório ARIA</span><span data-lang="en">ARIA Lab</span></h4>
+        <div class="card-meta">
+          <span data-lang="pt">Voluntário · Remoto · mai. 2026 – atual</span>
+          <span data-lang="en">Volunteer · Remote · May 2026 – Present</span>
+        </div>
+        <div class="pills">
+          <span class="pill" data-lang="pt">Visão computacional</span><span class="pill" data-lang="en">Computer vision</span>
+          <span class="pill">OCR</span>
+          <span class="pill">YOLO</span>
+          <span class="pill">RF-DETR</span>
+          <span class="pill" data-lang="pt">Saúde</span><span class="pill" data-lang="en">Healthcare</span>
+        </div>
+        <ul data-lang="pt">
+          <li>Modelos que leem nomes e dosagens de medicamentos em imagens de seringas, bombas de infusão, bolsas, frascos e canetas, em parceria com o Hospital Israelita Albert Einstein.</li>
+          <li>Treino e comparação de modelos de detecção e segmentação para identificar objetos e líquidos em ambiente hospitalar, com OCR integrado ao pipeline.</li>
+          <li>Análises de desempenho em benchmarks para orientar a escolha da arquitetura.</li>
+          <li>Modelos de análise e previsão de dados financeiros, como nível de confiança de clientes bancários e limite de crédito esperado.</li>
+        </ul>
+        <ul data-lang="en">
+          <li>Models that read drug names and dosages from images of syringes, infusion pumps, IV bags, vials and pens, in partnership with Hospital Israelita Albert Einstein.</li>
+          <li>Training and comparing detection and segmentation models to identify objects and liquids in hospital settings, with OCR integrated into the pipeline.</li>
+          <li>Benchmark performance analyses to guide architecture selection.</li>
+          <li>Models that analyze and forecast financial data, such as bank customer trust scores and expected credit limits.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h4><a href="https://usecompendium.com" target="_blank" rel="noopener">Compendium</a> · <span data-lang="pt">Sócio e Desenvolvedor</span><span data-lang="en">Co-founder &amp; Developer</span></h4>
+        <div class="card-meta">
+          <span data-lang="pt">mar. 2026 – set. 2026</span>
+          <span data-lang="en">Mar 2026 – Sep 2026</span>
+        </div>
+        <div class="pills">
+          <span class="pill">SaaS</span>
+          <span class="pill">Node.js</span>
+          <span class="pill">React</span>
+          <span class="pill">PostgreSQL</span>
+          <span class="pill">Multi-tenant</span>
+        </div>
+        <ul data-lang="pt">
+          <li>Aplicação web multi-tenant (um subdomínio por cliente) que centraliza normas, procedimentos, reuniões, advertências e suspensões.</li>
+          <li>Controle de leitura das normas por assinatura eletrônica com validade jurídica (Autentique), com PDFs assinados no Cloudflare R2.</li>
+          <li>Gestão de cargos e permissões, que define o que cada cargo pode visualizar e editar.</li>
+          <li>Integrações de cobrança (Asaas), e-mail (Resend) e notificações push em PWA, sobre uma API REST com JWT.</li>
+        </ul>
+        <ul data-lang="en">
+          <li>Multi-tenant web application (one subdomain per client) that centralizes policies, procedures, meetings, warnings and suspensions.</li>
+          <li>Policy read-tracking through legally valid electronic signatures (Autentique), with signed PDFs stored on Cloudflare R2.</li>
+          <li>Role and permission management, defining what each role can view and edit.</li>
+          <li>Billing (Asaas), email (Resend) and PWA push notification integrations on top of a REST API with JWT.</li>
+        </ul>
+        <div class="links">
+          Stack: JavaScript, Node.js (Fastify), React (Vite, Tailwind CSS), PostgreSQL, Prisma, Railway
+          <span class="dot">·</span>
+          [<a href="https://usecompendium.com" target="_blank" rel="noopener">usecompendium.com</a>]
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Novidades -->
+  <section id="novidades">
+    <div class="container">
+      <div class="section-title">
+        <h2><span data-lang="pt">Novidades</span><span data-lang="en">News</span></h2>
+      </div>
+      <div class="news">
+        <div class="news-item">
+          <div class="news-date"><span data-lang="pt">Mai</span><span data-lang="en">May</span><br />2026</div>
+          <div>
+            <span data-lang="pt">Entrei no laboratório ARIA como Machine Learning Engineer, trabalhando com visão computacional para a área hospitalar.</span>
+            <span data-lang="en">Joined the ARIA lab as a Machine Learning Engineer, working on computer vision for healthcare.</span>
+          </div>
+        </div>
+        <div class="news-item">
+          <div class="news-date"><span data-lang="pt">Mar</span><span data-lang="en">Mar</span><br />2026</div>
+          <div>
+            <span data-lang="pt">Tornei-me sócio desenvolvedor do <a href="https://usecompendium.com" target="_blank" rel="noopener">Compendium</a>.</span>
+            <span data-lang="en">Became co-founder and developer of <a href="https://usecompendium.com" target="_blank" rel="noopener">Compendium</a>.</span>
+          </div>
+        </div>
+        <div class="news-item">
+          <div class="news-date"><span data-lang="pt">Nov</span><span data-lang="en">Nov</span><br />2025</div>
+          <div>
+            <span data-lang="pt">Comecei o bacharelado em Ciência da Computação na UFPB.</span>
+            <span data-lang="en">Started my B.Sc. in Computer Science at UFPB.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projetos -->
+  <section id="projetos">
+    <div class="container">
+      <div class="section-title">
+        <h2><span data-lang="pt">Projetos</span><span data-lang="en">Projects</span></h2>
+      </div>
+
+      <div class="card">
+        <h4><a href="https://github.com/Matheusgfsilva/CONTROLE_FINANCEIRO" target="_blank" rel="noopener"><span data-lang="pt">Controle Financeiro</span><span data-lang="en">Financial Manager</span></a></h4>
+        <div class="pills">
+          <span class="pill">Python</span>
+          <span class="pill">Rich</span>
+          <span class="pill">CLI</span>
+        </div>
+        <p data-lang="pt">
+          Sistema de gestão financeira para pequenos negócios, com receitas, despesas, saldo, relatórios e
+          categorias editáveis. Arquitetura modular com cerca de 3.000 linhas, validação de entradas,
+          persistência em JSON e geração de dados de teste.
+        </p>
+        <p data-lang="en">
+          Financial management system for small businesses, with income, expenses, balance, reports and
+          editable categories. Modular architecture of about 3,000 lines, with input validation, JSON
+          persistence and test data generation.
+        </p>
+        <div class="links">[<a href="https://github.com/Matheusgfsilva/CONTROLE_FINANCEIRO" target="_blank" rel="noopener">GitHub</a>]</div>
+      </div>
+
+      <div class="card">
+        <h4><a href="https://github.com/Matheusgfsilva/CONTROLE_CLIENTES" target="_blank" rel="noopener"><span data-lang="pt">Controle de Clientes</span><span data-lang="en">Customer Manager</span></a></h4>
+        <div class="pills">
+          <span class="pill">Python</span>
+          <span class="pill">CRUD</span>
+          <span class="pill">CLI</span>
+        </div>
+        <p data-lang="pt">
+          Cadastro de clientes com validação de CPF, celular e e-mail, bloqueio de CPF duplicado,
+          persistência em JSON e separação entre modelo e controlador.
+        </p>
+        <p data-lang="en">
+          Customer registry with validation of CPF (Brazilian tax ID), phone and email, duplicate prevention,
+          JSON persistence and model–controller separation.
+        </p>
+        <div class="links">[<a href="https://github.com/Matheusgfsilva/CONTROLE_CLIENTES" target="_blank" rel="noopener">GitHub</a>]</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Competências -->
+  <section id="competencias">
+    <div class="container">
+      <div class="section-title">
+        <h2><span data-lang="pt">Competências</span><span data-lang="en">Skills</span></h2>
+      </div>
+      <dl class="skills">
+        <dt><span data-lang="pt">Linguagens</span><span data-lang="en">Programming</span></dt>
+        <dd>Python, JavaScript, Java, SQL</dd>
+        <dt>Machine Learning</dt>
+        <dd>
+          <span data-lang="pt">Visão computacional, detecção e segmentação, OCR, YOLO, RF-DETR, benchmarking, modelos preditivos</span>
+          <span data-lang="en">Computer vision, detection and segmentation, OCR, YOLO, RF-DETR, benchmarking, predictive modeling</span>
+        </dd>
+        <dt><span data-lang="pt">Desenvolvimento web</span><span data-lang="en">Web development</span></dt>
+        <dd>Node.js, Fastify, React, Tailwind CSS, REST APIs, PostgreSQL, MySQL, Prisma</dd>
+        <dt><span data-lang="pt">Automação</span><span data-lang="en">Automation</span></dt>
+        <dd>
+          <span data-lang="pt">n8n (nível inicial): criação de fluxos e integração entre serviços</span>
+          <span data-lang="en">n8n (beginner): building workflows and integrating services</span>
+        </dd>
+        <dt><span data-lang="pt">Idiomas</span><span data-lang="en">Languages</span></dt>
+        <dd>
+          <span data-lang="pt">Português (nativo), Inglês (intermediário avançado)</span>
+          <span data-lang="en">Portuguese (native), English (upper-intermediate)</span>
+        </dd>
+      </dl>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="footer">
+    <hr />
+    <ul class="icons">
+      <li><a href="mailto:matheusgfsilva16@gmail.com" aria-label="E-mail">
+        <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+      </a></li>
+      <li><a href="https://github.com/Matheusgfsilva" target="_blank" rel="noopener" aria-label="GitHub">
+        <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+      </a></li>
+      <li><a href="https://www.linkedin.com/in/matheus-gomesfs/" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+      </a></li>
+    </ul>
+    <small>© 2026 Matheus Gomes</small>
+  </footer>
+
+  <script>
+    function toggleLang() {
+      var next = document.documentElement.lang === "en" ? "pt-BR" : "en";
+      document.documentElement.lang = next;
+      try { localStorage.setItem("lang", next); } catch (e) {}
+    }
+  </script>
+</body>
+</html>

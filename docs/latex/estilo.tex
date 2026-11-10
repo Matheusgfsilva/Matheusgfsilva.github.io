@@ -1,0 +1,31 @@
+% Estilo compartilhado pelas versoes PT e EN
+\usepackage[a4paper,top=1.3cm,bottom=1.3cm,left=1.5cm,right=1.5cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+\usepackage{tabularx}
+
+\definecolor{linkblue}{RGB}{20,70,150}
+\newcommand{\link}[2]{\href{#1}{\textcolor{linkblue}{#2}}}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\linespread{1.04}
+
+% Titulos de secao em caixa alta com linha abaixo
+\titleformat{\section}{\large\bfseries\raggedright}{}{0em}{\MakeUppercase}[\vspace{1pt}\titlerule]
+\titlespacing*{\section}{0pt}{10pt}{4pt}
+
+% \entrada{titulo em negrito}{detalhe}{data a direita}
+\newcommand{\entrada}[3]{%
+  \par\vspace{4pt}\noindent\textbf{#1}#2\hfill#3\par\vspace{1pt}}
+
+% Itens com ponto medio, como no modelo
+\newenvironment{itens}{\begin{itemize}[leftmargin=0pt,label={$\cdot$},itemsep=1pt,topsep=1pt,parsep=0pt,itemindent=8pt,labelsep=4pt]}{\end{itemize}}
+
+% Linha "Rotulo   conteudo" para competencias
+\newcommand{\linha}[2]{\noindent\begin{tabularx}{\linewidth}{@{}p{4.0cm}@{}X@{}}\textbf{#1} & #2\end{tabularx}\par\vspace{0pt}}
